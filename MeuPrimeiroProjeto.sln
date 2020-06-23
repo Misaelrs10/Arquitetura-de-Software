@@ -33,6 +33,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.Pages", "6.Pages", "{031B134F-BD3A-4C50-8B61-0D9CF61EFB43}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite", "WebSite\WebSite.csproj", "{066B02BA-3125-47CA-8983-D2CEE686C96B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AAF757FB-2FA6-4543-9F4D-643FEA27C8BF} = {AAF757FB-2FA6-4543-9F4D-643FEA27C8BF}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
