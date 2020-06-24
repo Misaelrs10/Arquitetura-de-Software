@@ -8,6 +8,10 @@ namespace MeuPrimeiroProjeto.Entities
 
     public class Restaurante
     {
+        private string restName;
+        private string restEndereco;
+        private int restVotos;
+
         [Key]
         [Column("REST_IDENT")]
 
@@ -24,5 +28,13 @@ namespace MeuPrimeiroProjeto.Entities
         [Column("REST_VOTOS")]
 
         protected Restaurante () {}
+
+        public Restaurante(int id, string restName, string restEndereco, int restVotos)
+        {
+            Id = id;
+            this.restName = restName;
+            this.restEndereco = restEndereco;
+            this.restVotos = restVotos;
+        }
     }
 }

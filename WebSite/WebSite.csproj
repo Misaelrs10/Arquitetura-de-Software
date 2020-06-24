@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="Views\Pages\votacao.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Home\Login.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.CookiePolicy" Version="2.1.14" />
