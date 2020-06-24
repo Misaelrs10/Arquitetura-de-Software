@@ -56,8 +56,7 @@ namespace WebSite
             {
                 routes.MapRoute(
                     name: "default",
-                    url: "{controller}/{action}/{id}",
-                    template: "{controller=Home}/{action=Login}/{id?}");
+                     template: "{controller=Home}/{action=Login}/{id?}");
             });
         }
     }
