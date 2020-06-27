@@ -2,9 +2,6 @@
 using MeuPrimeiroProjeto.DAL;
 using MeuPrimeiroProjeto.DAL.Infra;
 using MeuPrimeiroProjeto.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MeuPrimeiroProjeto.BLL
