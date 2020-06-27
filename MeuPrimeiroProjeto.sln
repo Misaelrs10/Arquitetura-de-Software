@@ -30,11 +30,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeuPrimeiroProjeto.BLL", "M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeuPrimeiroProjeto.BLL.Infra", "MeuPrimeiroProjeto.BLL.Infra\MeuPrimeiroProjeto.BLL.Infra.csproj", "{08E52A2A-49C8-49AA-B1F0-E7714EAED618}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.Pages", "6.Pages", "{031B134F-BD3A-4C50-8B61-0D9CF61EFB43}"
-	ProjectSection(SolutionItems) = preProject
-		Login.html = Login.html
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

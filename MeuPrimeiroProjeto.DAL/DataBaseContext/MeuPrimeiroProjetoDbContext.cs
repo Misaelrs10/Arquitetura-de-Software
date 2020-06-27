@@ -2,9 +2,6 @@
 using MeuPrimeiroProjeto.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MeuPrimeiroProjeto.DAL.DataBaseContext
@@ -31,6 +28,8 @@ namespace MeuPrimeiroProjeto.DAL.DataBaseContext
         }
 
         public DbSet <Login> Login { get; set; }
+
+        public DbSet <Restaurante> Restaurantes { get; set; }
 
     }
 

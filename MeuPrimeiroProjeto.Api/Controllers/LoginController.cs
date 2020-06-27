@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using MeuPrimeiroProjeto.BLL.Infra;
 using MeuPrimeiroProjeto.Entities;
 using MeuPrimeiroProjeto.Entities.DTO;
 using MeuPrimeiroProjeto.Helpers;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MeuPrimeiroProjeto.Api.Controllers

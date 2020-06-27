@@ -29,9 +29,7 @@ namespace MeuPrimeiroProjeto.Entities
             this.Id = id;
             this.NickName = nickName;
             this.Pwd = pwd;
-        }
-
-        
+        }        
 
         private void Validations(string nickName, string pwd)
         {

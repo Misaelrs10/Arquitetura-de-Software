@@ -24,5 +24,6 @@ namespace MeuPrimeiroProjeto.Api.Controllers
                 throw ex;
             }
         }
+
     }
 }
