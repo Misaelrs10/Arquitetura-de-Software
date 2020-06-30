@@ -28,9 +28,11 @@ namespace MeuPrimeiroProjeto.Api
 
             //REPOSITORY
             services.AddScoped<ILoginRepository, LoginRepository>();
+            services.AddScoped<IRestauranteRepository, RestauranteRepository>();
 
             //BLL
             services.AddScoped<ILoginBLL, LoginBLL>();
+            services.AddScoped<IRestauranteBLL, RestauranteBLL>();
 
             services.AddControllers();
         }

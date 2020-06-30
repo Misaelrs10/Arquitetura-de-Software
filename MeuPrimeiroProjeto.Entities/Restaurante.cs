@@ -8,33 +8,37 @@ namespace MeuPrimeiroProjeto.Entities
 
     public class Restaurante
     {
-        private string restName;
-        private string restEndereco;
-        private int restVotos;
 
         [Key]
         [Column("REST_IDENT")]
 
         public long Id { get; private set; }
-        [Column("REST_IDENT")]
-
-        public String Name { get; private set; }
+        
         [Column("REST_NOME")]
-
-        public String Endereco { get; private set; }
+        public string restName { get; private set; }
+        
         [Column("REST_ENDERECO")]
+        public string restEndereco { get; private set; }
+        
 
-        public String Votos { get; private set; }
         [Column("REST_VOTOS")]
+        public long restVotos { get; private set; }
+        
+
+
+        [Column("REST_IMAGEM")]
+        public string restImagem { get; private set; }
+        
 
         protected Restaurante () {}
 
-        public Restaurante(int id, string restName, string restEndereco, int restVotos)
+        public Restaurante(int id, string restname, string restendereco, long restvotos, string restimagem)
         {
-            Id = id;
-            this.restName = restName;
-            this.restEndereco = restEndereco;
-            this.restVotos = restVotos;
+            this.Id = id;
+            this.restName = restname;
+            this.restEndereco = restendereco;
+            this.restVotos = restvotos;
+            this.restImagem = restimagem;
         }
     }
 }

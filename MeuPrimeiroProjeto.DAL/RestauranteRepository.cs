@@ -2,6 +2,7 @@
 using MeuPrimeiroProjeto.DAL.Infra;
 using MeuPrimeiroProjeto.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -11,6 +12,8 @@ namespace MeuPrimeiroProjeto.DAL
     {
         private readonly MeuPrimeiroProjetoDbContext _dbContext;
 
+        private List<Restaurante> restaurantes = new List<Restaurante>();
+
         public RestauranteRepository(MeuPrimeiroProjetoDbContext dbContext)
         {
             _dbContext = dbContext;
@@ -18,15 +21,29 @@ namespace MeuPrimeiroProjeto.DAL
 
         public IUnityOfWork UnityOfWork => _dbContext;
 
-        async Task<Restaurante> IRestauranteRepository.GetRestauranteAsync(string restName, string restEndereco, int restVotos)
+        //Get All
+
+        public IEnumerable<Restaurante> GetAll()
         {
-            return await _dbContext.Restaurantes.FirstOrDefaultAsync();
+            return restaurantes;
         }
+
+
+        //Get
+
+        async Task<List<Restaurante>> IRestauranteRepository.GetRestauranteAsync(string restName, string restEndereco, int restVotos, string restImagem)
+        {
+            return await _dbContext.Restaurantes.ToListAsync();
+        }
+
+        //Post
 
         void IRestauranteRepository.CreateRestauranteAsync(Restaurante restaurante)
         {
             _dbContext.Restaurantes.Add(restaurante);
         }
+
+        //Put
 
         void IRestauranteRepository.UpdateRestauranteAsync(Restaurante restaurante)
         {

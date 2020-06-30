@@ -12,7 +12,9 @@ namespace MeuPrimeiroProjeto.Entities.DTO
 
         public string Endereco { get; set; }
 
-        public string Votos { get; set; }
+        public long Votos { get; set; }
+
+        public string Imagem { get; set; }
 
     }
 }

@@ -13,13 +13,14 @@ namespace MeuPrimeiroProjeto.Entities
         [Column("LGN_IDENTI")]
 
         public long Id { get; private set; }
+
+
         [Column ("LGN_LOGIN")]
+        public string NickName { get; private set; }
 
-        public String NickName { get; private set; }
         [Column("LGN_SENHA")]
-
         public string Pwd { get; private set; }
-
+        
         protected Login() { }
 
         public Login (long id, string nickName, string pwd)

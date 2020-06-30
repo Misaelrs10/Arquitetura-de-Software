@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using MeuPrimeiroProjeto.BLL.Infra;
 using MeuPrimeiroProjeto.Helpers;
@@ -12,6 +13,8 @@ namespace MeuPrimeiroProjeto.Api.Controllers
     {
         private IRestauranteBLL _restauranteBLL;
 
+        List<IRestauranteBLL> _restaurantes = new List<IRestauranteBLL>();
+
         public RestauranteController(IRestauranteBLL restauranteBLL)
         {
             _restauranteBLL = restauranteBLL;
@@ -19,13 +22,13 @@ namespace MeuPrimeiroProjeto.Api.Controllers
 
         [Route("get"), HttpGet]
 
-        public async Task<IActionResult> Get(string restName, string restEndereco, int restVotos)
+        public async Task<IActionResult> Get(string restName, string restEndereco, int restVotos, string restImagem)
         {
             var responseContent = new ResponseContent();
 
             try
             {
-                responseContent.Object = await _restauranteBLL.GetRestauranteAsync(restName, restEndereco, restVotos);
+                responseContent.Object = await _restauranteBLL.GetRestauranteAsync(restName, restEndereco, restVotos, restImagem);
 
                 if(responseContent.Object==null){
                     responseContent.Message = "A pesquisa não retornou dados.";

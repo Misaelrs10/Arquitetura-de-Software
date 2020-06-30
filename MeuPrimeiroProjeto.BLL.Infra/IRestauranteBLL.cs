@@ -1,12 +1,13 @@
 ﻿using MeuPrimeiroProjeto.Entities;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace MeuPrimeiroProjeto.BLL.Infra
 {
     public interface IRestauranteBLL : IDisposable
     {
-        Task<Restaurante> GetRestauranteAsync(string restName, string restEndereco, int restVotos);
+        Task<List<Restaurante>> GetRestauranteAsync(string restName, string restEndereco, int restVotos, string restImagem);
 
         Task CreateRestauranteAsync(Restaurante restaurante);
 

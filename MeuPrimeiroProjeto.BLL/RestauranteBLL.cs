@@ -3,6 +3,7 @@ using MeuPrimeiroProjeto.DAL;
 using MeuPrimeiroProjeto.DAL.Infra;
 using MeuPrimeiroProjeto.Entities;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace MeuPrimeiroProjeto.BLL
@@ -17,12 +18,14 @@ namespace MeuPrimeiroProjeto.BLL
             _restauranteRepository = restauranteRepository;
         }
 
-        public async Task<Restaurante> GetRestauranteAsync(string restName, string restEndereco, int restVotos)
+        
+
+        public async Task<List<Restaurante>> GetRestauranteAsync(string restName, string restEndereco, int restVotos, string restImagem)
         {
             //VERIFICA SE OS DADOS QUE SERÃO CONSTRUÍDOS ESTÃO OK
-            new Restaurante(id: 0, restName: restName, restEndereco: restEndereco, restVotos: restVotos);
+            new Restaurante(id: 0, restname: restName, restendereco: restEndereco, restvotos: restVotos, restimagem: restImagem);
 
-            return await _restauranteRepository.GetRestauranteAsync(restName, restEndereco, restVotos);
+            return await _restauranteRepository.GetRestauranteAsync(restName, restEndereco, restVotos, restImagem);
         }
 
         ///<summary>
