@@ -13,7 +13,7 @@ namespace MeuPrimeiroProjeto.Api.Controllers
     {
         private IRestauranteBLL _restauranteBLL;
 
-        List<IRestauranteBLL> _restaurantes = new List<IRestauranteBLL>();
+        
 
         public RestauranteController(IRestauranteBLL restauranteBLL)
         {
